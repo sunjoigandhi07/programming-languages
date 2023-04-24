@@ -14,9 +14,9 @@ module DailyThreeSpec where
                 removeAllExcept 1 [1, 2, 1, 3, 4, 5] `shouldBe` [1, 1]
         describe "countOccurances" $ do
             it "produces the number of occurances " $
-                countOccurances 1 [] `shouldBe` 0
+                countOccurences 1 [] `shouldBe` 0
             it "produces the number of occurances" $
-                countOccurances 4 [1, 3, 4, 5, 6, 4, 8, 4, 9]`shouldBe` 3
+                countOccurences 4 [1, 3, 4, 5, 6, 4, 8, 4, 9]`shouldBe` 3
         describe "substitute" $ do 
             it "produces a new list with substituted values " $ 
                 substitute 1 2 [] `shouldBe` []

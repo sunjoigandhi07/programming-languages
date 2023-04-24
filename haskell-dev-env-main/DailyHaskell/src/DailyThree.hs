@@ -11,11 +11,11 @@ module DailyThree where
     -- function takes in an element and a list of elements 
     -- function returns an integer representing how often the element occurs in the list 
     -- function type: Eq a => a -> [a] -> Int 
-    countOccurances :: Eq a => a -> [a] -> Int 
-    countOccurances _ [] = 0
-    countOccurances x (y:ys) 
-        | x == y    = 1 + countOccurances x ys 
-        | otherwise = countOccurances x ys
+    countOccurences :: Eq a => a -> [a] -> Int 
+    countOccurences _ [] = 0
+    countOccurences x (y:ys) 
+        | x == y    = 1 + countOccurences x ys 
+        | otherwise = countOccurences x ys
 
     -- function takes in two elements and a list of elements 
     -- function returns a new list with the second element parameter replacing the first parameter within the list 
