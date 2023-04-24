@@ -9,7 +9,7 @@ module DailyFour where
     -- unzipTriples 
     -- consumes a list of 3, tuples 
     -- returns a tuple of three lists 
-    unzipTriples :: [(a, a, a)] -> ([a], [a], [a])
+    unzipTriples :: [(a, b, c)] -> ([a], [b], [c])
     unzipTriples [] = ([], [], [])
     unzipTriples ((x, y, z):xs) =
         let (xs', ys', zs') = unzipTriples xs
