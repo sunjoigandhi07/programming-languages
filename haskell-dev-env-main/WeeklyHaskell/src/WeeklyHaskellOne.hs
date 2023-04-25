@@ -20,13 +20,15 @@ module WeeklyHaskellOne where
     -- function takes the string and returns each character's ascii values 
     -- function type: String -> [Int] 
     charsToAscii :: String -> [Int]
-    charsToAscii = map fromEnum
+    charsToAscii [] = [] 
+    charsToAscii (e:es) = fromEnum e : charsToAscii es 
 
     -- function takes in a list of ints and returns a string 
     -- function takes in ascii values and returns the list of characters the ints represnt 
     -- function type: [Int] -> [Char ]
     asciiToChars :: [Int] -> [Char]
-    asciiToChars  = map toEnum
+    asciiToChars [] =[] 
+    asciiToChars (f:fs) = toEnum f : asciiToChars fs 
 
     -- function takes in an int and a list of ints 
     -- function returns a new list of ints 
